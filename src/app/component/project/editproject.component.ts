@@ -31,7 +31,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 </div>
 </div> 
 
-<input type="checkbox" [(ngModel)]="showhidedate" class="form-control" [ngModelOptions]="{standalone: true}"/> Start Date & End Date
+<input type="checkbox" class="form-control" /> Start Date & End Date
 
 
 

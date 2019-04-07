@@ -185,7 +185,7 @@ edit(project_id:string)
 
 
 
-Addproject(Project:string,Priority:String,Start_Date:string,End_Date:string,Users:string,Status:string){
+Addproject(Project:string,Priority:String,Start_Date:string,End_Date:string,Users:string,Status:boolean){
 
     this.http.post('http://localhost:5001/project',
     {Project:Project,Start_Date:Start_Date,End_Date:End_Date,Priority:Priority,Users:Users,Status:Status})
@@ -197,7 +197,7 @@ Addproject(Project:string,Priority:String,Start_Date:string,End_Date:string,User
     })
 }
 
-endtask(project_id:string,Project:string,Start_Date:string,End_Date:string,Priority:string,Users:string,Status:Boolean){
+endtask(project_id:string,Project:string,Start_Date:string,End_Date:string,Priority:string,Users:string,Status:boolean){
     Status=true;
         this.http.put('http://localhost:5001/editproject/'+project_id,
         {Project:Project,Start_Date:Start_Date,End_Date:End_Date,Priority:Priority,Users:Users,Status:Status})
